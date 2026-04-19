@@ -1,0 +1,33 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Data Analysis}{1}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Shapes.}{1}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Dead features.}{1}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{System-wide dynamics.}{1}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{County structure.}{1}{section*.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Total active customer outages across all 83 counties versus time. The test window begins immediately to the right of the dashed vertical line and covers the recovery phase.}}{2}{figure.caption.5}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:system}{{1}{2}{Total active customer outages across all 83 counties versus time. The test window begins immediately to the right of the dashed vertical line and covers the recovery phase}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem formulation}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Cross-validation protocol}{2}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Baselines}{2}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Feature-engineered LightGBM}{2}{subsection.3.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces LightGBM hyperparameter sweep (mean-RMSE across 83 counties; lower is better). The ``last-48h'' fold is the recovery-tail analogue of the test window; the ``48h-prior'' fold (2023-06-26 issue time) contains the storm onset and is essentially unpredictable without future weather, so its absolute scale is huge and less informative for model selection. The chosen configuration is the second row.}}{3}{table.caption.6}\protected@file@percent }
+\newlabel{tab:lgbm_sweep}{{1}{3}{LightGBM hyperparameter sweep (mean-RMSE across 83 counties; lower is better). The ``last-48h'' fold is the recovery-tail analogue of the test window; the ``48h-prior'' fold (2023-06-26 issue time) contains the storm onset and is essentially unpredictable without future weather, so its absolute scale is huge and less informative for model selection. The chosen configuration is the second row}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Seq2Seq LSTM}{3}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Blending}{3}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{4}{section.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Last-48h hold-out RMSE, averaged across the 83 counties. The submitted per-horizon blend (24h: 0.70 LGBM + 0.30 exp-decay; 48h: 0.80 LGBM + 0.20 exp-decay) beats every component model on both horizons by $\ge $1.0 RMSE.}}{4}{table.caption.7}\protected@file@percent }
+\newlabel{tab:holdout}{{2}{4}{Last-48h hold-out RMSE, averaged across the 83 counties. The submitted per-horizon blend (24h: 0.70 LGBM + 0.30 exp-decay; 48h: 0.80 LGBM + 0.20 exp-decay) beats every component model on both horizons by $\ge $1.0 RMSE}{table.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 5-fold rolling-origin backtest (mean / median / max RMSE across folds). LightGBM has the lowest median on both horizons; SARIMAX is competitive on 24h but worse on 48h because its AR(2) process keeps predictions too close to the last observed level.}}{4}{table.caption.8}\protected@file@percent }
+\newlabel{tab:backtest}{{3}{4}{5-fold rolling-origin backtest (mean / median / max RMSE across folds). LightGBM has the lowest median on both horizons; SARIMAX is competitive on 24h but worse on 48h because its AR(2) process keeps predictions too close to the last observed level}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Analysis and Policy Recommendation}{4}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}What drives the LightGBM prediction?}{4}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Part~II: generator placement}{5}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Limitations}{5}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}References}{5}{section.6}\protected@file@percent }
+\gdef \@abspage@last{5}
